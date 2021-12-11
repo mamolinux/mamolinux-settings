@@ -1,0 +1,10 @@
+[Nemo Action]
+Name=Open in Remote Terminal
+Comment=Open current directory in remote terminal
+Exec=<remote_terminal.py %F>
+Icon-Name=terminal
+Selection=none
+Extensions=dir;
+# conditions=exec <remote_terminal.py %U>;
+Dependencies=ssh;
+UriScheme=sftp

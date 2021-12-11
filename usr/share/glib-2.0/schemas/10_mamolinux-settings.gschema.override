@@ -1,0 +1,102 @@
+[org.cinnamon]
+app-menu-icon-name = 'start-here'
+enabled-applets = ['panel1:left:0:menu@cinnamon.org', 'panel1:center:0:calendar@cinnamon.org', 'panel1:right:0:systray@cinnamon.org', 'panel1:right:1:xapp-status@cinnamon.org', 'panel1:right:2:notifications@cinnamon.org', 'panel1:right:3:printers@cinnamon.org', 'panel1:right:4:removable-drives@cinnamon.org', 'panel1:right:5:keyboard@cinnamon.org', 'panel1:right:6:favorites@cinnamon.org', 'panel1:right:7:network@cinnamon.org', 'panel1:right:8:sound@cinnamon.org', 'panel1:right:9:power@cinnamon.org', 'panel1:right:10:user@cinnamon.org']
+favorite-apps=['firefox.desktop', 'org.gnome.Software.desktop', 'cinnamon-settings.desktop', 'xchat.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop']
+hotcorner-layout = ['desktop:false:0', 'scale:false:0', 'scale:true:0', 'expo:true:0']
+no-adjacent-panel-barriers=true
+panel-zone-icon-sizes = '[{"panelId":1,"left":0,"center":0,"right":0}]'
+panel-zone-symbolic-icon-sizes = '[{"panelId": 1, "left": 24, "center": 24, "right": 24}]'
+panels-autohide = ['1:false']
+panels-enabled = ['1:0:top']
+panels-height = ['1:32', '2:56']
+
+[org.cinnamon.cinnamon-session]
+quit-delay-toggle = true
+quit-time-delay = 60
+
+[org.cinnamon.control-center.display]
+show-fractional-scaling-controls = true
+
+[org.cinnamon.desktop.a11y.keyboard]
+togglekeys-enable-beep = true
+
+[org.cinnamon.desktop.background]
+picture-options = 'stretched'
+picture-uri = 'file:///usr/share/backgrounds/freedom-wallpapers/367789.jpg'
+
+[org.cinnamon.desktop.interface]
+clock-show-date = true
+clock-show-seconds = true
+clock-use-24h = false
+cursor-size = 40
+cursor-theme = 'Sucharu-Blue'
+gtk-theme = 'Sucharu-Blue'
+icon-theme = 'Sucharu-Blue'
+
+[org.cinnamon.desktop.screensaver]
+date-format = '%A %B %e, %Y'
+show-notifications = true
+time-format = '%I:%M:%S %p'
+use-custom-format = true
+
+[org.cinnamon.desktop.sound]
+maximum-volume = 100
+theme-name = 'sucharu'
+volume-sound-enabled = true
+volume-sound-file = '/usr/share/sounds/Yaru/stereo/audio-volume-change.oga'
+
+[org.cinnamon.desktop.wm.preferences]
+button-layout = 'close,minimize,maximize:menu'
+theme = 'Sucharu-Blue'
+
+[org.cinnamon.muffin]
+button-layout = 'maximize,minimize,close:menu'
+
+[org.cinnamon.settings-daemon.peripherals.keyboard]
+numlock-state = 'on'
+
+[org.cinnamon.settings-daemon.plugins.power]
+button-power = 'interactive'
+critical-battery-action = 'shutdown'
+idle-brightness = 10
+idle-dim-time = 120
+lid-close-ac-action = 'nothing'
+lid-close-battery-action = 'nothing'
+lid-close-suspend-with-external-monitor = false
+sleep-display-ac = 0
+sleep-display-battery = 600
+sleep-inactive-ac-timeout = 0
+sleep-inactive-battery-timeout = 0
+
+[org.cinnamon.settings-daemon.plugins.xsettings]
+buttons-have-icons = true
+menus-have-icons = true
+
+[org.cinnamon.sounds]
+close-file = '/usr/share/sounds/freedesktop/stereo/dialog-warning.oga'
+login-enabled = true
+login-file = '/usr/share/sounds/Yaru/stereo/desktop-login.oga'
+logout-enabled = true
+logout-file = '/usr/share/sounds/freedesktop/stereo/service-logout.oga'
+map-enabled = false
+map-file = '/usr/share/sounds/freedesktop/stereo/dialog-information.oga'
+maximize-file = '/usr/share/sounds/freedesktop/stereo/window-attention.oga'
+minimize-file = '/usr/share/sounds/freedesktop/stereo/window-attention.oga'
+notification-enabled = true
+notification-file = '/usr/share/sounds/Yaru/stereo/message.oga'
+plug-enabled = true
+plug-file = '/usr/share/sounds/freedesktop/stereo/device-added.oga'
+switch-file = '/usr/share/sounds/Yaru/stereo/message.oga'
+tile-file = '/usr/share/sounds/freedesktop/stereo/window-question.oga'
+unmaximize-file = '/usr/share/sounds/freedesktop/stereo/window-attention.oga'
+unplug-enabled = true
+unplug-file = '/usr/share/sounds/freedesktop/stereo/device-removed.oga'
+
+[org.cinnamon.theme]
+name = 'Sucharu-Blue'
+
+[net.launchpad.plank.dock.settings]
+dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'org.gnome.Software.dockitem', 'gnome-system-monitor.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
+theme = 'MacOS-BigSur-Dark'
+zoom-percent = 175
+zoom-enabled = true
