@@ -22,7 +22,7 @@ togglekeys-enable-beep = true
 
 [org.cinnamon.desktop.background]
 picture-options = 'stretched'
-picture-uri = 'file:///usr/share/backgrounds/freedom-wallpapers/367789.jpg'
+picture-uri = 'file:///usr/share/backgrounds/mamolinux-wallpapers/367789.jpg'
 
 [org.cinnamon.desktop.interface]
 clock-show-date = true
