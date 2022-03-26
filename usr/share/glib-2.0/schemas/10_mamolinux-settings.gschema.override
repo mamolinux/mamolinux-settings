@@ -10,7 +10,7 @@ panels-autohide = ['1:false']
 panels-enabled = ['1:0:top']
 panels-height = ['1:32', '2:56']
 
-[org.cinnamon.cinnamon-session]
+[org.cinnamon.SessionManager]
 quit-delay-toggle = true
 quit-time-delay = 60
 
