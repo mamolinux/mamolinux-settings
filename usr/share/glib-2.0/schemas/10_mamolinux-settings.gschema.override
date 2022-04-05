@@ -41,7 +41,7 @@ use-custom-format = true
 
 [org.cinnamon.desktop.sound]
 maximum-volume = 100
-theme-name = 'sucharu'
+theme-name = 'Sucharu'
 volume-sound-enabled = true
 volume-sound-file = '/usr/share/sounds/Yaru/stereo/audio-volume-change.oga'
 
@@ -97,6 +97,6 @@ name = 'Sucharu-Blue'
 
 [net.launchpad.plank.dock.settings]
 dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'org.gnome.Software.dockitem', 'gnome-system-monitor.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
-theme = 'MacOS-BigSur-Dark'
+theme = 'Sucharu'
 zoom-percent = 175
 zoom-enabled = true
