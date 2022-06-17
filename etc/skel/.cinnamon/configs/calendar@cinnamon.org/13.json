@@ -19,18 +19,18 @@
     },
     "use-custom-format": {
         "type": "switch",
-        "default": false,
+        "default": true,
         "description": "Use a custom date format",
         "tooltip": "Check this to define a custom format for the date in the calendar applet.",
         "value": true
     },
     "custom-format": {
         "type": "entry",
-        "default": "%A, %B %e, %H:%M",
+        "default": "%A, %B %e, %Y, %H:%M:%S",
         "description": "Date format",
         "dependency": "use-custom-format",
         "tooltip": "Set your custom format here.",
-        "value": "%A, %B %e, %Y, %I:%M:%S %p"
+        "value": "%A, %B %e, %Y, %H:%M:%S"
     },
     "format-button": {
         "type": "button",
@@ -49,6 +49,5 @@
         "default": "<Super>c",
         "tooltip": "Set keybinding(s) to show the calendar.",
         "value": "<Super>c"
-    },
-    "__md5__": "5ea063337a9b776b6c19825f31b2a320"
+    }
 }

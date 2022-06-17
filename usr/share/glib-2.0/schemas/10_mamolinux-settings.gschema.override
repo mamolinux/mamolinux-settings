@@ -49,9 +49,6 @@ volume-sound-file = '/usr/share/sounds/Yaru/stereo/audio-volume-change.oga'
 button-layout = 'close,minimize,maximize:menu'
 theme = 'Sucharu'
 
-[org.cinnamon.muffin]
-button-layout = 'maximize,minimize,close:menu'
-
 [org.cinnamon.settings-daemon.peripherals.keyboard]
 numlock-state = 'on'
 
