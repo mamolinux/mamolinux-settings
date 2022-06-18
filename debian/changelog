@@ -1,3 +1,20 @@
+mamolinux-settings (1.0.3) stable; urgency=medium
+
+  * update mamolinux settings (#2)
+    - Add new grub configuration file
+    - Update cinnamon calendar to show year
+    - delay starting plank
+    - remove muffin configuration from settings
+    - update d/postinst to copy grub configuration
+    - add configuration for synapse
+  * Add sources of propietary softwares (#3)
+    - Add source for anydesk
+    - Add source for microsoft apps
+    - d/compat: remove and use debhelper-compat in d/control
+    - fix lintian in d/rules, d/postinst, d/changelog
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Sat, 18 Jun 2022 07:00:40 +0530
+
 mamolinux-settings (1.0.2) stable; urgency=medium
 
   * Update copyright and standards
