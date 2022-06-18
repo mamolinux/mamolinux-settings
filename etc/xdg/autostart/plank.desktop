@@ -69,4 +69,4 @@ X-GNOME-Autostart-enabled=true
 Hidden=false
 Name[en]=Plank
 Comment[en]=Stupidly simple.
-X-GNOME-Autostart-Delay=0
+X-GNOME-Autostart-Delay=10
