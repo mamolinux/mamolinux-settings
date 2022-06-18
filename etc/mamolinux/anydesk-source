@@ -1,0 +1,3 @@
+#!/bin/bash
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | gpg --dearmor | tee /etc/apt/trusted.gpg.d/anydesk.gpg > /dev/null
+echo "deb http://deb.anydesk.com/ all main #Anydesk" | tee /etc/apt/sources.list.d/anydesk-stable.list

@@ -2,14 +2,17 @@ Source: mamolinux-settings
 Section: admin
 Priority: optional
 Maintainer: Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
-Build-Depends: debhelper (>= 10)
-Standards-Version: 4.5.0
+Build-Depends: debhelper-compat (= 12),
+               python3
+Standards-Version: 4.6.0.1
 
 Package: mamolinux-settings
 Architecture: all
-Depends: mamolinux-themes,
-        plank,
-        synapse,
-        ${misc:Depends}
-Description: MamoLinux Settings
+Depends: libpangox-1.0-0,
+         mamolinux-themes,
+         plank,
+         synapse,
+         ${python3:Depends},
+         ${misc:Depends}
+Description: Settings for MamoLinux
  System-wide settings for MamoLinux
