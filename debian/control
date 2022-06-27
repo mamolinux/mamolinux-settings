@@ -8,8 +8,7 @@ Standards-Version: 4.6.0.1
 
 Package: mamolinux-settings
 Architecture: all
-Depends: libpangox-1.0-0,
-         mamolinux-themes,
+Depends: mamolinux-themes,
          plank,
          synapse,
          ${python3:Depends},

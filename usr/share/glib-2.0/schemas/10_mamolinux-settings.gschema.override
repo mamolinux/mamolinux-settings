@@ -22,7 +22,7 @@ togglekeys-enable-beep = true
 
 [org.cinnamon.desktop.background]
 picture-options = 'stretched'
-picture-uri = 'file:///usr/share/backgrounds/mamolinux-wallpapers/367789.jpg'
+picture-uri = 'file:///usr/share/backgrounds/jellyfish/jellyfish-1.jpg'
 
 [org.cinnamon.desktop.interface]
 clock-show-date = true
@@ -93,7 +93,7 @@ unplug-file = '/usr/share/sounds/freedesktop/stereo/device-removed.oga'
 name = 'Sucharu-Blue'
 
 [net.launchpad.plank.dock.settings]
-dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'org.gnome.Software.dockitem', 'gnome-system-monitor.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
+dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'org.gnome.Software.dockitem', 'system-monitoring-center.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
 theme = 'Sucharu'
 zoom-percent = 175
 zoom-enabled = true
