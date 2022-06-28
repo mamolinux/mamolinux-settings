@@ -3,13 +3,15 @@ Section: admin
 Priority: optional
 Maintainer: Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
 Build-Depends: debhelper-compat (= 12),
-               python3
+               dh-python,
+               python3:any,
 Standards-Version: 4.6.0.1
 
 Package: mamolinux-settings
 Architecture: all
 Depends: mamolinux-themes,
          plank,
+         python3,
          synapse,
          ${python3:Depends},
          ${misc:Depends}
