@@ -16,6 +16,10 @@ case "$1" in
     if which cp >/dev/null 2>&1
     then
         cp /etc/mamolinux/grub /etc/default/
+        rm -rf /etc/skel/.cinnamon
+        rm -rf /etc/skel/.config
+        cp -rf /etc/mamolinux/.cinnamon /etc/skel/
+        cp -rf /etc/mamolinux/.config /etc/skel/
     fi
     
     if which bash  >/dev/null 2>&1
