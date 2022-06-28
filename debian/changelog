@@ -1,3 +1,16 @@
+mamolinux-settings (1.0.4) stable; urgency=medium
+
+  * new settings for jammy (#4)
+    - remove libpangox-1.0-0 from depends
+    - use system-monitoring-center to replace gnome-system-monitor on plank
+    - Use a jellyfish wallpaper as default
+  * fix lintian errors due to etc/skel (#5)
+    - move settings files from etc/skel
+    - install user settings to etc/skel on postinst
+    - fix lintian warning from python depends
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Tue, 28 Jun 2022 22:44:31 +0530
+
 mamolinux-settings (1.0.3) stable; urgency=medium
 
   * update mamolinux settings (#2)
