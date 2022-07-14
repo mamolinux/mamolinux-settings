@@ -9,7 +9,7 @@ Standards-Version: 4.6.0.1
 
 Package: mamolinux-settings
 Architecture: all
-Depends: mamolinux-themes,
+Depends: sucharu-themes,
          plank,
          python3,
          synapse,
