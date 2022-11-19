@@ -1,3 +1,13 @@
+mamolinux-settings (1.0.6) stable; urgency=medium
+
+  * Use Sucharu default variant as default theme (#6)
+  * Update source of MS teams (#7)
+  * Transition to mamolinux-settings-cinnamon (#8)
+    - Rename mamolinux-settings to mamolinux-settings-cinnamon
+  * Update readme with logo and badges (#9)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Sat, 19 Nov 2022 15:12:41 +0530
+
 mamolinux-settings (1.0.5) stable; urgency=medium
 
   * Rename mamolinux-themes to sucharu-themes
