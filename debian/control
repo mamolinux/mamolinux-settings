@@ -2,18 +2,29 @@ Source: mamolinux-settings
 Section: admin
 Priority: optional
 Maintainer: Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
-Build-Depends: debhelper-compat (= 12),
+Build-Depends: debhelper-compat (= 13),
                dh-python,
                python3:any,
 Standards-Version: 4.6.0.1
 
-Package: mamolinux-settings
+Package: mamolinux-settings-cinnamon
 Architecture: all
-Depends: sucharu-themes,
+Depends: sucharu-theme-gtk,
          plank,
-         python3,
+         python3:any,
          synapse,
          ${python3:Depends},
          ${misc:Depends}
-Description: Settings for MamoLinux
- System-wide settings for MamoLinux
+Replaces: mamolinux-settings ( << 1.0.6 )
+Breaks: mamolinux-settings ( << 1.0.6 )
+Conflicts: mamolinux-settings ( << 1.0.6 )
+Description: Cinnamon Settings for MamoLinux
+ System-wide settings for MamoLinux Cinnamon Desktop Environment
+
+Package: mamolinux-settings
+Architecture: all
+Section: oldlibs
+Depends: mamolinux-settings-cinnamon,
+         ${misc:Depends}
+Description: transitional package for Settings for MamoLinux
+ This is a transitional package. It can safely be removed.
