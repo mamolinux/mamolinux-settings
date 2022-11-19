@@ -29,9 +29,9 @@ clock-show-date = true
 clock-show-seconds = true
 clock-use-24h = false
 cursor-size = 40
-cursor-theme = 'Sucharu-Blue'
-gtk-theme = 'Sucharu-Blue'
-icon-theme = 'Sucharu-Blue'
+cursor-theme = 'Sucharu'
+gtk-theme = 'Sucharu'
+icon-theme = 'Sucharu'
 
 [org.cinnamon.desktop.screensaver]
 date-format = '%A %B %e, %Y'
@@ -90,7 +90,7 @@ unplug-enabled = true
 unplug-file = '/usr/share/sounds/freedesktop/stereo/device-removed.oga'
 
 [org.cinnamon.theme]
-name = 'Sucharu-Blue'
+name = 'Sucharu'
 
 [net.launchpad.plank.dock.settings]
 dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'org.gnome.Software.dockitem', 'system-monitoring-center.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
