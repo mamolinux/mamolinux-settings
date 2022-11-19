@@ -5,8 +5,8 @@ wget -qO - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | t
 sh -c 'echo "### THIS FILE IS AUTOMATICALLY CONFIGURED ###\n# You may comment out this entry, but any other modifications may be lost." > /etc/apt/sources.list.d/microsoft-edge.list'
 sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main #MS Edge" >> /etc/apt/sources.list.d/microsoft-edge.list'
 # MS Teams
-sh -c 'echo "### THIS FILE IS AUTOMATICALLY CONFIGURED ###\n# You may comment out this entry, but any other modifications may be lost." > /etc/apt/sources.list.d/ms-teams.list'
-sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main #MS Teams" >> /etc/apt/sources.list.d/ms-teams.list'
+sh -c 'echo "### THIS FILE IS AUTOMATICALLY CONFIGURED ###\n# You may comment out this entry, but any other modifications may be lost." > /etc/apt/sources.list.d/teams.list'
+sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/teams stable main #MS Teams" >> /etc/apt/sources.list.d/teams.list'
 # VS Code
 sh -c 'echo "### THIS FILE IS AUTOMATICALLY CONFIGURED ###\n# You may comment out this entry, but any other modifications may be lost." > /etc/apt/sources.list.d/vscode.list'
 sh -c 'echo "deb [arch=amd64,arm64,armhf] http://packages.microsoft.com/repos/code stable main #VS Code" >> /etc/apt/sources.list.d/vscode.list'
