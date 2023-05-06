@@ -1,3 +1,9 @@
+mamolinux-settings (1.0.7) stable; urgency=medium
+
+  * Add dependencies and update links (#10)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Sat, 06 May 2023 06:26:21 +0530
+
 mamolinux-settings (1.0.6) stable; urgency=medium
 
   * Use Sucharu default variant as default theme (#6)
