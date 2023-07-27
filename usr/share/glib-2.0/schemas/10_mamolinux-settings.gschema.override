@@ -29,7 +29,7 @@ clock-show-date = true
 clock-show-seconds = true
 clock-use-24h = false
 cursor-size = 40
-cursor-theme = 'Sucharu'
+cursor-theme = 'Sucharu-Green'
 gtk-theme = 'Sucharu'
 icon-theme = 'Sucharu'
 
