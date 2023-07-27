@@ -26,6 +26,7 @@ case "$1" in
     then
         bash /etc/mamolinux/anydesk-source
         bash /etc/mamolinux/ms-apps-source
+        bash /etc/mamolinux/intel-compilers-source
     fi
     ;;
 
