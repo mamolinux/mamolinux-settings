@@ -93,7 +93,7 @@ unplug-file = '/usr/share/sounds/freedesktop/stereo/device-removed.oga'
 name = 'Sucharu'
 
 [net.launchpad.plank.dock.settings]
-dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'org.gnome.Software.dockitem', 'system-monitoring-center.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
+dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox.dockitem', 'org.gnome.Epiphany.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'org.gnome.Software.dockitem', 'io.github.hakandundar34coding.system-monitoring-center.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
 theme = 'Sucharu'
 zoom-percent = 175
 zoom-enabled = true
