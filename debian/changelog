@@ -1,3 +1,13 @@
+mamolinux-settings (1.0.9) stable; urgency=medium
+
+  * fix icons in plank (#14)
+    - Add epiphany after firefox
+    - fix system-monitoring-center icon on plank
+  * Add settings for slick-greeter and netplan (#15)
+  * Add config for theme-manager and remove ms-teams (#16)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Mon, 28 Aug 2023 23:32:54 +0530
+
 mamolinux-settings (1.0.8) stable; urgency=medium
 
   * Fix cursor theme to Sucharu-Green (#11)
