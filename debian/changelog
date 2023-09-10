@@ -1,3 +1,18 @@
+mamolinux-settings (1.1.0) stable; urgency=medium
+
+  * Fix defalut items in plank (#17)
+    - Fix dockitem for system-monitoring-center
+    - Fix dockitem for Epiphany
+  * Fix intel oneapi source (#18)
+  * Add apt preferences and autostart redshift (#19)
+  * Add bootloader and release files (#20)
+    - Fixes grub bootloader
+    - Removes Gnu/Linux line from grub
+  * Update debian packaging scripts (#21)
+    - Add post removal script
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Sun, 10 Sep 2023 21:09:17 +0530
+
 mamolinux-settings (1.0.9) stable; urgency=medium
 
   * fix icons in plank (#14)
