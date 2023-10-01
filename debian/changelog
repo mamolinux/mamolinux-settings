@@ -1,3 +1,9 @@
+mamolinux-settings (1.1.2) stable; urgency=medium
+
+  * Update version to 23.04 for lunar (#22)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Sun, 01 Oct 2023 11:27:02 +0530
+
 mamolinux-settings (1.1.1) stable; urgency=medium
 
   * Fix no name in grub configuration (#23)
