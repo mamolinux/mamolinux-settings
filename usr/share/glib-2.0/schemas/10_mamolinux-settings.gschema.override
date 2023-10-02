@@ -22,7 +22,7 @@ togglekeys-enable-beep = true
 
 [org.cinnamon.desktop.background]
 picture-options = 'stretched'
-picture-uri = 'file:///usr/share/backgrounds/jellyfish/jellyfish-1.jpg'
+picture-uri = 'file:///usr/share/backgrounds/mamolinux-default-wallpaper.jpeg'
 
 [org.cinnamon.desktop.interface]
 clock-show-date = true
