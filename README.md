@@ -22,7 +22,7 @@
 	</a>
 </p>
 
-Repository description
+System-wide settings for MamoLinux Cinnamon Desktop Environment
 
 ## Download Latest Version
 
@@ -31,26 +31,9 @@ Repository description
   <a href="https://github.com/mamolinux/mamolinux-settings/tarball/master"><i class="fa fa-file-zip-o"></i> Download .tar.gz</a>
 </p>
 
-## Features and Screenshots
-Coming soon or create a Pull Request.
-
-<!-- ### Sample Screenshot
-<p align="center">
-	<img src="https://github.com/mamolinux/mamolinux-settings/raw/gh-pages/screenshots/sample-screenshot.png" alt="Sample Screenshot">
-</p> -->
-
 ## Contents
 - [Download Latest Version](#download-latest-version)
-- [Features and Screenshots](#features-and-screenshots)
 - [Dependencies](#dependencies)
-  - [Debian/Ubuntu based systems](#debianubuntu-based-distro)
-  - [Other Linux-based systems](#other-linux-based-distro)
-- [Installation](#build-and-install-the-latest-version)
-  - [Debian/Ubuntu based systems](#debianubuntu-based-systems)
-  - [Other Linux-based systems](#other-linux-based-systems)
-  - [For Developers](#for-developers)
-- [User Manual](#user-manual)
-- [Issue Tracking and Contributing](#issue-tracking-and-contributing)
 - [Contributors](#contributors)
 
 ## Dependencies
@@ -59,25 +42,6 @@ sucharu-theme-gtk
 plank
 synapse
 ```
-### Debian/Ubuntu based distro
-Coming soon or create a Pull Request.
-### Other Linux-based distro
-Coming soon or create a Pull Request.
-
-## Build and Install the Latest Version
-Coming soon or create a Pull Request.
-### Debian/Ubuntu based systems
-Coming soon or create a Pull Request.
-### Other Linux-based systems
-Coming soon or create a Pull Request.
-### For Developers
-Coming soon or create a Pull Request.
-
-## User Manual
-Coming soon or create a Pull Request.
-
-## Issue Tracking and Contributing
-Coming soon or create a Pull Request.
 
 ## Contributors
 
