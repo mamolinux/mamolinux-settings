@@ -1,3 +1,12 @@
+mamolinux-settings (22.04) jammy; urgency=medium
+
+  * Use a default wallpeper using symlink (#24)
+    - mamolinux-wallpepers provide a default
+      wallpeper via symlink
+  * Update readme with repository info (#25)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Tue, 03 Oct 2023 22:34:02 +0530
+
 mamolinux-settings (1.1.1) stable; urgency=medium
 
   * Fix no name in grub configuration (#23)
