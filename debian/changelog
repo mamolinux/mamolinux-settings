@@ -1,3 +1,19 @@
+mamolinux-settings (23.10) mantic; urgency=medium
+
+  * Update items in plank and main menu (#26)
+    - Add new flutter-based app-center to plank
+    - Remove gnome-software from plank
+    - Replace gnome-software with app-center
+      on cinnamon menu
+  * Rename schema file for cinnamon desktop (#27)
+  * Update release to mantic (23.10) (#29)
+  * Update bootloader scripts for mantic (#28)
+  * Update debian packaging scripts (#30)
+    - Run update-grub2 and recompile schemas
+      post install and removal
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Fri, 03 Nov 2023 21:23:54 +0530
+
 mamolinux-settings (23.04) lunar; urgency=medium
 
   * Update readme with repository info (#25)
