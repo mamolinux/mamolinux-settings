@@ -44,6 +44,11 @@ case "$1" in
       bash /etc/mamolinux/ms-apps-source
       bash /etc/mamolinux/intel-compilers-source
     fi
+    
+    if which update-grub2 >/dev/null 2>&1
+    then
+      update-grub2
+    fi
   ;;
   
   abort-upgrade|abort-remove|abort-deconfigure)
