@@ -10,6 +10,12 @@ GRUB_DISTRIBUTOR=`lsb_release -d -s | cut -d " " -f1 2>/dev/null || echo Debian`
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 GRUB_CMDLINE_LINUX=""
 GRUB_BACKGROUND="/usr/share/backgrounds/grub/comet.jpg"
+
+# If your computer has multiple operating systems installed, then you
+# probably want to run os-prober. However, if your computer is a host
+# for guest OSes installed via LVM or raw disk devices, running
+# os-prober can cause damage to those guest OSes as it mounts
+# filesystems to look for things.
 GRUB_DISABLE_OS_PROBER=false
 
 # Uncomment to enable BadRAM filtering, modify to suit your needs
@@ -17,7 +23,7 @@ GRUB_DISABLE_OS_PROBER=false
 # the memory map information from GRUB (GNU Mach, kernel of FreeBSD ...)
 #GRUB_BADRAM="0x01234567,0xfefefefe,0x89abcdef,0xefefefef"
 
-# Uncomment to disable graphical terminal (grub-pc only)
+# Uncomment to disable graphical terminal
 #GRUB_TERMINAL=console
 
 # The resolution used on graphical terminal
