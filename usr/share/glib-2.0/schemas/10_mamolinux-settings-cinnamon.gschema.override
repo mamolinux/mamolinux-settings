@@ -1,7 +1,7 @@
 [org.cinnamon]
 app-menu-icon-name = 'start-here'
 enabled-applets = ['panel1:left:0:menu@cinnamon.org', 'panel1:center:0:calendar@cinnamon.org', 'panel1:right:0:systray@cinnamon.org', 'panel1:right:1:xapp-status@cinnamon.org', 'panel1:right:2:notifications@cinnamon.org', 'panel1:right:3:printers@cinnamon.org', 'panel1:right:4:removable-drives@cinnamon.org', 'panel1:right:5:keyboard@cinnamon.org', 'panel1:right:6:favorites@cinnamon.org', 'panel1:right:7:network@cinnamon.org', 'panel1:right:8:sound@cinnamon.org', 'panel1:right:9:power@cinnamon.org', 'panel1:right:10:user@cinnamon.org']
-favorite-apps=['firefox.desktop', 'snap-store_snap-store.desktop', 'cinnamon-settings.desktop', 'xchat.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop']
+favorite-apps=['firefox_firefox.desktop', 'snap-store_snap-store.desktop', 'cinnamon-settings.desktop', 'xchat.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop']
 hotcorner-layout = ['desktop:false:0', 'scale:false:0', 'scale:true:0', 'expo:true:0']
 no-adjacent-panel-barriers=true
 panel-zone-icon-sizes = '[{"panelId":1,"left":0,"center":0,"right":0}]'
@@ -93,7 +93,7 @@ unplug-file = '/usr/share/sounds/freedesktop/stereo/device-removed.oga'
 name = 'Sucharu'
 
 [net.launchpad.plank.dock.settings]
-dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox.dockitem', 'org.gnome.Epiphany.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'snap-store_snap-store.dockitem', 'io.github.hakandundar34coding.system-monitoring-center.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
+dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox_firefox.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'snap-store_snap-store.dockitem', 'io.github.hakandundar34coding.system-monitoring-center.dockitem', 'cinnamon-settings.dockitem', 'desktop.dockitem', 'trash.dockitem']
 theme = 'Sucharu'
 zoom-percent = 175
 zoom-enabled = true
