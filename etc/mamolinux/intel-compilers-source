@@ -1,3 +1,8 @@
 #!/bin/bash
-wget -qO - https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/oneapi-archive-keyring.gpg > /dev/null
-echo "deb https://apt.repos.intel.com/oneapi all main #Intel OneAPI" | sudo tee /etc/apt/sources.list.d/oneAPI.list
+wget -qO - https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB | gpg --dearmor | tee /etc/apt/trusted.gpg.d/oneapi-archive-keyring.gpg > /dev/null
+echo -e "#Intel OneAPI\n\
+Types: deb\n\
+URIs: https://apt.repos.intel.com/oneapi\n\
+Suites: all\n\
+Components: main\n\
+Signed-By: /etc/apt/trusted.gpg.d/oneapi-archive-keyring.gpg" | tee /etc/apt/sources.list.d/oneAPI.sources
