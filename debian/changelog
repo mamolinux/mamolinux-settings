@@ -1,3 +1,15 @@
+mamolinux-settings (24.04.0) noble; urgency=medium
+
+  * Update release to noble (24.04 LTS) (#31)
+  * Fix items on cinnamon menu and plank (#32)
+  * Rebase boot files from ubuntu (#33)
+    - Update boot creation script used by grub
+    - Update grub config
+    - Add desktop file for release upgrade
+  * Update source repos for third-party packages (#34)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Sun, 02 Jun 2024 01:33:14 +0530
+
 mamolinux-settings (23.10) mantic; urgency=medium
 
   * Update items in plank and main menu (#26)
