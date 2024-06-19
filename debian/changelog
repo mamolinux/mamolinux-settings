@@ -1,3 +1,12 @@
+mamolinux-settings (24.04.1) noble; urgency=medium
+
+  * Fix plank themes for theme-manager (#35)
+    - Sucharu now uses plank theme accents with
+      lowercase letters
+  * Fix plank theme and delay plank on startup (#36)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Wed, 19 Jun 2024 19:33:57 +0530
+
 mamolinux-settings (24.04.0) noble; urgency=medium
 
   * Update release to noble (24.04 LTS) (#31)
