@@ -41,6 +41,7 @@ case "$1" in
     if which bash >/dev/null 2>&1
     then
       bash /etc/mamolinux/anydesk-source
+      bash /etc/mamolinux/brave-browser-source
       bash /etc/mamolinux/ms-apps-source
       bash /etc/mamolinux/intel-compilers-source
     fi
