@@ -1,3 +1,14 @@
+mamolinux-settings (24.04.2) noble; urgency=medium
+
+  * Update mamolinux version to 24.04.1 (#37)
+  * Update third party FOSS sources (#38)
+    - Update VS Code
+    - Add Brave browser
+  * Update debian packaging scripts (#39)
+    - Setup Brave browser source post install
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Thu, 05 Sep 2024 11:24:30 +0530
+
 mamolinux-settings (24.04.1) noble; urgency=medium
 
   * Fix plank themes for theme-manager (#35)
