@@ -17,4 +17,4 @@ URIs: http://packages.microsoft.com/repos/code\n\
 Suites: stable\n\
 Components: main\n\
 Signed-By: /etc/apt/trusted.gpg.d/microsoft.gpg\n\
-Architectures: amd64,arm64,armhf" | tee /etc/apt/sources.list.d/vscode.list
+Architectures: amd64,arm64,armhf" | tee /etc/apt/sources.list.d/vscode.sources
