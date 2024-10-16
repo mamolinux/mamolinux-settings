@@ -40,7 +40,6 @@ time-format = '%I:%M:%S %p'
 use-custom-format = true
 
 [org.cinnamon.desktop.sound]
-maximum-volume = 100
 theme-name = 'Sucharu'
 volume-sound-enabled = true
 volume-sound-file = '/usr/share/sounds/Yaru/stereo/audio-volume-change.oga'
