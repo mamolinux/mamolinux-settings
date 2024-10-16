@@ -1,3 +1,10 @@
+mamolinux-settings (24.04.2.1) noble; urgency=medium
+
+  * Fix vscode source (#40)
+  * Update cinnamon sound settings (#42)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Wed, 16 Oct 2024 20:42:03 +0530
+
 mamolinux-settings (24.04.2) noble; urgency=medium
 
   * Update mamolinux version to 24.04.1 (#37)
