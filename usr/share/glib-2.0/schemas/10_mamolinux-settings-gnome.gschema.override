@@ -1,0 +1,9 @@
+[org.gnome.desktop.background]
+picture-options = 'stretched'
+picture-uri = 'file:///usr/share/backgrounds/mamolinux-default-wallpaper.jpeg'
+
+[net.launchpad.plank.dock.settings]
+dock-items=['nemo.dockitem', 'org.gnome.Terminal.dockitem', 'firefox_firefox.dockitem', 'org.gnome.Evolution.dockitem', 'vlc.dockitem', 'snap-store_snap-store.dockitem', 'io.github.hakandundar34coding.system-monitoring-center.dockitem', 'desktop.dockitem', 'trash.dockitem']
+theme = 'Sucharu'
+zoom-percent = 175
+zoom-enabled = true
