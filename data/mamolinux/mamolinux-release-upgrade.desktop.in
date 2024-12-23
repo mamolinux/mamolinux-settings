@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=MamoLinux Release Upgrader
 GenericName=MamoLinux Release Upgrader
-Comment=Upgrade MamoLinux to next availavle release
+Comment=Upgrade MamoLinux to next available release
 Exec=do-release-upgrade --allow-third-party --frontend=DistUpgradeViewGtk3
-Icon=system-software-update
+Icon=mamolinux-installer
 Terminal=false
 Type=Application
 Categories=System;Settings;
