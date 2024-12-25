@@ -6,6 +6,7 @@ project('mamolinux-settings',
 
 application_id = meson.project_name()
 i18n = import('i18n')
+fs = import('fs')
 
 datadir = get_option('datadir')
 
