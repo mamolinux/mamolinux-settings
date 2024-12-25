@@ -12,3 +12,5 @@ desktop_file = i18n.merge_file(
       install: true,
   install_dir: desktop_dir
 )
+
+subdir('mamolinux/third-party')
