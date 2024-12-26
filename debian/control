@@ -8,7 +8,7 @@ Build-Depends: debhelper-compat (= 13),
                python3:any,
 Standards-Version: 4.6.0.1
 
-Package: mamolinux-settings-cinnamon
+Package: mamolinux-settings-common
 Architecture: all
 Depends: sucharu-theme-gtk,
          plank,
@@ -16,16 +16,30 @@ Depends: sucharu-theme-gtk,
          synapse,
          ${python3:Depends},
          ${misc:Depends}
-Replaces: mamolinux-settings ( << 1.0.6 )
-Breaks: mamolinux-settings ( << 1.0.6 )
-Conflicts: mamolinux-settings ( << 1.0.6 )
-Description: Cinnamon Settings for MamoLinux
- System-wide settings for MamoLinux Cinnamon Desktop Environment
+Description: Common Settings for MamoLinux
+ System-wide common settings for all MamoLinux
+ Desktop Environments.
 
-Package: mamolinux-settings
+Package: mamolinux-settings-budgie
 Architecture: all
-Section: oldlibs
-Depends: mamolinux-settings-cinnamon,
+Depends: python3:any,
+         ${python3:Depends},
          ${misc:Depends}
-Description: transitional package for Settings for MamoLinux
- This is a transitional package. It can safely be removed.
+Description: Budgie Settings for MamoLinux
+ System-wide settings for MamoLinux Budgie Desktop Environment.
+
+Package: mamolinux-settings-cinnamon
+Architecture: all
+Depends: python3:any,
+         ${python3:Depends},
+         ${misc:Depends}
+Description: Cinnamon Settings for MamoLinux
+ System-wide settings for MamoLinux Cinnamon Desktop Environment.
+
+Package: mamolinux-settings-gnome
+Architecture: all
+Depends: python3:any,
+         ${python3:Depends},
+         ${misc:Depends}
+Description: GNOME Settings for MamoLinux
+ System-wide settings for MamoLinux GNOME Desktop Environment.
