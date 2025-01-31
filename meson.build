@@ -10,6 +10,7 @@ i18n = import('i18n')
 fs = import('fs')
 
 prefix = get_option('prefix')
+bindir = get_option('bindir')
 datadir = get_option('datadir')
 sysconfdir = get_option('sysconfdir')
 mamolinuxdir = join_paths(datadir, 'mamolinux')
