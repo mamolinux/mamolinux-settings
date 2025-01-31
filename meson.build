@@ -9,6 +9,8 @@ i18n = import('i18n')
 fs = import('fs')
 
 datadir = get_option('datadir')
+sysconfdir = get_option('sysconfdir')
 
 subdir('data')
 subdir('po')
+subdir('src')
