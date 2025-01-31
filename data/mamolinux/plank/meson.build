@@ -20,7 +20,7 @@ plankautostart = i18n.merge_file(
         input: 'plank.desktop.in',
        output: 'plank.desktop',
          type: 'desktop',
-       po_dir: '../po',
+       po_dir: '../../../po',
       install: true,
   install_dir: autostartdir
 )

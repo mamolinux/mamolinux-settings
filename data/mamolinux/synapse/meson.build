@@ -7,7 +7,7 @@ synapseautostart = i18n.merge_file(
         input: 'synapse.desktop.in',
        output: 'synapse.desktop',
          type: 'desktop',
-       po_dir: '../po',
+       po_dir: '../../../po',
       install: true,
   install_dir: autostartdir
 )

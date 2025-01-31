@@ -1,3 +1,6 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
 data/mamolinux/mamolinux-release-upgrade.desktop.in
+data/mamolinux/plank/plank.desktop.in
+data/mamolinux/synapse/synapse.desktop.in
+data/schemas/net.launchpad.plank.gschema.xml.in
