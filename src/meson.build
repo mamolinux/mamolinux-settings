@@ -1,3 +1,8 @@
+install_data('mamolinux-release-upgrader'
+   install_dir: bindir,
+  install_mode: 'rwxr--r--'
+)
+
 nemo_remote_term_files = []
 nemo_remote_term_files += files(
   run_command(

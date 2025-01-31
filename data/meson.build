@@ -20,4 +20,4 @@ plankschema = i18n.merge_file(
 )
 
 subdir('mamolinux')
-subdir('mamolinux/third-party')
+subdir('schemas')
