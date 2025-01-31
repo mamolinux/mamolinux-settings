@@ -1,7 +1,5 @@
-lib
-etc/apt
-etc/lightdm
-etc/xdg/autostart
+etc
+usr/lib
 usr/share/applications
 usr/share/mamolinux
 usr/share/nemo
