@@ -16,6 +16,9 @@ Depends: sucharu-theme-gtk,
          synapse,
          ${python3:Depends},
          ${misc:Depends}
+Replaces: mamolinux-settings-cinnamon ( << 24.04.2.2 )
+Breaks: mamolinux-settings-cinnamon ( << 24.04.2.2 )
+Conflicts: mamolinux-settings-cinnamon ( << 24.04.2.2 )
 Description: Common Settings for MamoLinux
  System-wide common settings for all MamoLinux
  Desktop Environments.
@@ -30,8 +33,9 @@ Description: Budgie Settings for MamoLinux
 
 Package: mamolinux-settings-cinnamon
 Architecture: all
+Section: oldlibs
 Depends: python3:any,
-         mamolinux-settings-common,
+         mamolinux-settings-common ( >= 24.04.2.2 ),
          ${misc:Depends}
 Description: Cinnamon Settings for MamoLinux
  System-wide settings for MamoLinux Cinnamon Desktop Environment.
