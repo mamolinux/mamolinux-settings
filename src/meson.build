@@ -1,5 +1,10 @@
-install_data('mamolinux-release-upgrader'
+install_data('mamolinux-release-upgrader',
    install_dir: bindir,
+  install_mode: 'rwxr--r--'
+)
+
+install_data('mamolinux_settings_setup',
+   install_dir: mamolinuxdir,
   install_mode: 'rwxr--r--'
 )
 
