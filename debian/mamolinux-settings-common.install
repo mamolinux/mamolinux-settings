@@ -2,5 +2,14 @@ etc
 usr/bin
 usr/lib
 usr/share/applications
-usr/share/mamolinux
+usr/share/mamolinux/10_linux
+usr/share/mamolinux/grub
+usr/share/mamolinux/lsb-release
+usr/share/mamolinux/mamolinux_settings_setup
+usr/share/mamolinux/net.launchpad.plank.gschema.xml
+usr/share/mamolinux/os-release
+usr/share/mamolinux/plank
+usr/share/mamolinux/synapse
+usr/share/mamolinux/theme-manager
+usr/share/mamolinux/thirdpartysrcs
 usr/share/nemo
