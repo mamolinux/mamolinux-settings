@@ -1,0 +1,97 @@
+#!/usr/bin/python3
+
+import argparse
+import os
+import shutil
+import sys
+
+
+def sys_settings(src, dest):
+	if not os.path.isfile(src+'.orig'):
+		shutil.copy(dest, src+'.orig')
+	shutil.copy(src, dest)
+
+def sys_preinst(src, dest):
+	if os.path.isfile(src):
+		shutil.copy(src, dest)
+		os.remove(src)
+
+def desktop_settings(src, dest):
+	if os.path.isdir(os.path.dirname(dest)):
+		shutil.rmtree(os.path.dirname(dest))
+	shutil.copy(src, dest)
+
+def setup_at_install(desktop):
+	if 'common' in desktop:
+		# Old system settings
+		sys_preinst('/etc/mamolinux/10_linux.old', '/etc/grub.d/10_linux')
+		sys_preinst('/etc/mamolinux/grub.old', '/etc/default/grub')
+		sys_preinst('/etc/mamolinux/lsb-release.old', '/etc/lsb-release')
+		sys_preinst('/etc/mamolinux/os-release.old', '/usr/lib/os-release')
+		
+		# Grub settings
+		sys_settings('/usr/share/mamolinux/10_linux', '/etc/grub.d/10_linux')
+		sys_settings('/usr/share/mamolinux/grub', '/etc/default/grub')
+		
+		# Release version
+		sys_settings('/usr/share/mamolinux/lsb-release', '/etc/lsb-release')
+		sys_settings('/usr/share/mamolinux/os-release', '/usr/lib/os-release')
+		
+		# Plank settings
+		shutil.copy('/usr/share/mamolinux/net.launchpad.plank.gschema.xml', '/usr/share/glib-2.0/schemas/net.launchpad.plank.gschema.xml')
+		shutil.rmtree('/etc/skel/.config/plank')
+		os.system('cp -rf /usr/share/mamolinux/plank/* /etc/skel/.config/plank/dock1/launchers')
+		# Synapse settings
+		desktop_settings('/usr/share/mamolinux/synapse/config.json', '/etc/skel/.config/synapse/config.json')
+		# Theme Manager settings
+		desktop_settings('/usr/share/mamolinux/theme-manager/config.cfg', '/etc/mamolinux/.config/theme-manager/config.cfg')
+		
+		# Third party sources
+		os.system('bash /usr/share/mamolinux/thirdpartysrcs/anydesk-source')
+		os.system('bash /usr/share/mamolinux/thirdpartysrcs/brave-browser-source')
+		os.system('bash /usr/share/mamolinux/thirdpartysrcs/ms-apps-source')
+		os.system('bash /usr/share/mamolinux/thirdpartysrcs/intel-compilers-source')
+	
+	# Cinnamon settings
+	if 'cinnamon' in desktop:
+		desktop_settings('/usr/share/mamolinux/cinnamon/calendar_config.json', '/etc/skel/.cinnamon/configs/calendar@cinnamon.org/13.json')
+
+def setup_at_remove(desktop):
+	if 'common' in desktop:
+		shutil.copy('/usr/share/mamolinux/10_linux.orig', '/etc/grub.d/10_linux')
+		shutil.copy('/usr/share/mamolinux/grub.orig', '/etc/default/grub')
+		shutil.copy('/usr/share/mamolinux/lsb-release.orig', '/etc/lsb-release')
+		shutil.copy('/usr/share/mamolinux/os-release.orig', '/usr/lib/os-release')
+		
+		shutil.rmtree('/etc/skel/.config/plank/dock1')
+		shutil.rmtree('/etc/skel/.config/synapse')
+		shutil.rmtree('/etc/skel/.config/theme-manager')
+		try:
+			os.rmdir('/usr/share/mamolinux')
+			os.rmdir('/etc/skel/.config/plank')
+			os.rmdir('/etc/skel/.config')
+		except Exception as e:
+			print(e)
+	
+	if 'cinnamon' in desktop:
+		shutil.rmtree('/etc/skel/.cinnamon/configs/calendar@cinnamon.org')
+		try:
+			os.rmdir('/etc/skel/.cinnamon')
+		except Exception as e:
+			print(e)
+
+
+if __name__ == '__main__':
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--mode', '-m', dest='mode', required=True, type=str, choices=['install','remove'])
+	parser.add_argument('--desktop', '-d', dest='desktop', type=str, default=None, choices=['common', 'cinnamon'])
+	
+	args = parser.parse_args()
+	try:
+		if args.mode == 'install':
+			setup_at_install(args.desktop)
+		elif args.mode == 'remove':
+			setup_at_remove(args.desktop)
+	except:
+		parser.print_help()
+		sys.exit(0)
