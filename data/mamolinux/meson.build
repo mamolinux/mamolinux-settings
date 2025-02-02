@@ -11,3 +11,12 @@ desktop_file = i18n.merge_file(
       install: true,
   install_dir: desktop_dir
 )
+
+install_data('theme-manager-config.cfg',
+  install_dir: join_paths(mamolinuxdir, 'theme-manager'),
+       rename: 'config.cfg'
+)
+
+install_data('cinnamon/calendar_config.json',
+  install_dir: join_paths(mamolinuxdir, 'cinnamon')
+)
