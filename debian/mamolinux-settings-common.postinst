@@ -8,9 +8,9 @@ set -e
 
 case "$1" in
   configure)
-    if which plank >/dev/null 2>&1
+    if [ -f "/usr/share/mamolinux/mamolinux_settings_setup" ] >/dev/null 2>&1
     then
-      cp /etc/mamolinux/net.launchpad.plank.gschema.xml /usr/share/glib-2.0/schemas
+      /usr/share/mamolinux/mamolinux_settings_setup --mode install --desktop common
     fi
     
     if which glib-compile-schemas >/dev/null 2>&1
@@ -18,32 +18,9 @@ case "$1" in
       glib-compile-schemas /usr/share/glib-2.0/schemas
     fi
     
-    if which cp >/dev/null 2>&1
+    if which grub-install >/dev/null 2>&1
     then
-      cp /etc/grub.d/10_linux /etc/mamolinux/10_linux.old
-      cp /etc/mamolinux/10_linux /etc/grub.d
-      
-      cp /etc/default/grub /etc/mamolinux/grub.old
-      cp /etc/mamolinux/grub /etc/default/
-      
-      cp /etc/lsb-release /etc/mamolinux/lsb-release.old
-      cp /etc/mamolinux/lsb-release /etc
-      
-      cp /usr/lib/os-release /etc/mamolinux/os-release.old
-      cp /etc/mamolinux/os-release /usr/lib
-      
-      rm -rf /etc/skel/.cinnamon
-      rm -rf /etc/skel/.config
-      cp -rf /etc/mamolinux/.cinnamon /etc/skel/
-      cp -rf /etc/mamolinux/.config /etc/skel/
-    fi
-    
-    if which bash >/dev/null 2>&1
-    then
-      bash /etc/mamolinux/anydesk-source
-      bash /etc/mamolinux/brave-browser-source
-      bash /etc/mamolinux/ms-apps-source
-      bash /etc/mamolinux/intel-compilers-source
+      grub-install
     fi
     
     if which update-grub2 >/dev/null 2>&1
