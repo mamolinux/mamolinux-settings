@@ -1,10 +1,10 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: mamolinux-settings
 Upstream-Contact: Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
-Source: https://www.github.com/hsbasu/mamolinux-settings
+Source: https://www.github.com/mamolinux/mamolinux-settings
 
 Files: *
-Copyright: 2021 Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
+Copyright: 2021-2025 Himadri Sekhar Basu <hsb10@iitbbs.ac.in>
 License: GPL-3+
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
