@@ -1,3 +1,62 @@
+mamolinux-settings (24.04.2.2) noble; urgency=medium
+
+  * Update mamolinux release to oracular (24.10) (#41)
+  * Port to meson buildsystem (#43)
+    - Fix typo
+    - Add meson as debian dependency
+    - Add translation files
+  * Add settings for other DEs (#44)
+    - Add settings for budgie and gnome DEs
+    - Create separate package for common settings
+  * Move third party sources (#45)
+    - Remove unnecessary debian files
+    - Remove redshift autostart file
+  * Build deb package for each DE settings (#46)
+    - Build deb for GNOME and Budgie desktops
+    - Build deb for common settings
+  * Move MamoLinux OS config files (#47)
+  * Move plank settings files (#48)
+  * Move desktop settings (#49)
+  * Move nemo action, apt and greeter preferences (#50)
+    - Use meson to install apt preferences
+    - Use meson to install lightdm preferences
+    - Use meson install remote terminal nemo
+      action
+    - Install network configuration to usr/lib
+  * Include settings for apps using meson (#51)
+    - Include autostart and dock items for plank
+    - Include autostart and configs for synapse
+    - Include configs for theme-manager
+    - Update debian/*install files
+  * Run release upgrade via script (#52)
+    - New icon for release upgrader
+    - Move override schemas to data
+    - Separate script for release upgrade
+  * Fix meson translations (#53)
+    - Fix translation path for desktop and
+      xml files
+    - Rename plank schema
+  * Revert mamolinux release to noble (24.04.1) (#54)
+  * Add os config and settings setup scripts (#55)
+    - Fix meson build error for release-upgrader
+    - Add script for settings setup and install
+      it using meson
+    - Add os configuration scripts
+  * Add budgie and cinnamon settings (#56)
+    - Add plank settings for budgie
+    - Add cinnamon calender settings in meson build
+    - Add theme-manager settings in meson build
+  * Update debian packaging (#57)
+    - Update runtime depends
+    - Update year and source in copyright
+    - Update debian postinst and postrm scripts
+    - Update debian packaging rules
+  * Fix same file in multiple debian packages (#58)
+    - Fix cinnamon related files going into
+      common settings package
+
+ -- Himadri Sekhar Basu <mamolinux@mamolinux.org>  Thu, 20 Feb 2025 00:35:37 +0530
+
 mamolinux-settings (24.04.2.1) noble; urgency=medium
 
   * Fix vscode source (#40)
