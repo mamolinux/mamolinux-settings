@@ -19,6 +19,7 @@ def sys_preinst(src, dest):
 def desktop_settings(src, dest):
 	if os.path.isdir(os.path.dirname(dest)):
 		shutil.rmtree(os.path.dirname(dest))
+	os.makedirs(os.path.dirname(dest))
 	shutil.copy(src, dest)
 
 def setup_at_install(desktop):
@@ -39,12 +40,14 @@ def setup_at_install(desktop):
 		
 		# Plank settings
 		shutil.copy('/usr/share/mamolinux/net.launchpad.plank.gschema.xml', '/usr/share/glib-2.0/schemas/net.launchpad.plank.gschema.xml')
-		shutil.rmtree('/etc/skel/.config/plank')
+		if os.path.isdir('/etc/skel/.config/plank'):
+			shutil.rmtree('/etc/skel/.config/plank')
+		os.makedirs('/etc/skel/.config/plank/dock1/launchers')
 		os.system('cp -rf /usr/share/mamolinux/plank/* /etc/skel/.config/plank/dock1/launchers')
 		# Synapse settings
 		desktop_settings('/usr/share/mamolinux/synapse/config.json', '/etc/skel/.config/synapse/config.json')
 		# Theme Manager settings
-		desktop_settings('/usr/share/mamolinux/theme-manager/config.cfg', '/etc/mamolinux/.config/theme-manager/config.cfg')
+		desktop_settings('/usr/share/mamolinux/theme-manager/config.cfg', '/etc/skel/.config/theme-manager/config.cfg')
 		
 		# Third party sources
 		os.system('bash /usr/share/mamolinux/thirdpartysrcs/anydesk-source')
@@ -72,10 +75,16 @@ def setup_at_remove(desktop):
 			os.rmdir('/etc/skel/.config')
 		except Exception as e:
 			print(e)
+		
+		if os.path.exists('/etc/mamolinux'):
+			shutil.rmtree('/etc/mamolinux')
+		if os.path.exists('/etc/apt/preferences.d/mamolinux.pref'):
+			os.remove('/etc/apt/preferences.d/mamolinux.pref')
 	
 	if 'cinnamon' in desktop:
 		shutil.rmtree('/etc/skel/.cinnamon/configs/calendar@cinnamon.org')
 		try:
+			os.rmdir('/etc/skel/.cinnamon/configs')
 			os.rmdir('/etc/skel/.cinnamon')
 		except Exception as e:
 			print(e)
@@ -87,11 +96,12 @@ if __name__ == '__main__':
 	parser.add_argument('--desktop', '-d', dest='desktop', type=str, default=None, choices=['common', 'cinnamon'])
 	
 	args = parser.parse_args()
-	try:
-		if args.mode == 'install':
-			setup_at_install(args.desktop)
-		elif args.mode == 'remove':
-			setup_at_remove(args.desktop)
-	except:
-		parser.print_help()
-		sys.exit(0)
+	# try:
+	if args.mode == 'install':
+		setup_at_install(args.desktop)
+	elif args.mode == 'remove':
+		setup_at_remove(args.desktop)
+	# except Exception as e:
+	# 	print(e)
+		# parser.print_help()
+		# sys.exit(0)
