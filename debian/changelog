@@ -1,3 +1,14 @@
+mamolinux-settings (24.04.2.3) noble; urgency=medium
+
+  * Fix conflict between settings packages (#59)
+    - Fix conflict between file in cinnamon
+      and common settings packages
+    - Fix errors settings setup script
+    - Remove previous installation files
+  * Update mamolinux lts release to 24.04.2 (#60)
+
+ -- Himadri Sekhar Basu <mamolinux@mamolinux.org>  Thu, 20 Feb 2025 00:59:09 +0530
+
 mamolinux-settings (24.04.2.2) noble; urgency=medium
 
   * Update mamolinux release to oracular (24.10) (#41)
