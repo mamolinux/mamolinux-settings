@@ -21,6 +21,10 @@ def desktop_settings(src, dest):
 		shutil.rmtree(os.path.dirname(dest))
 	os.makedirs(os.path.dirname(dest))
 	shutil.copy(src, dest)
+	
+def rmtree_dir(dir):
+	if os.path.isdir(dir):
+		shutil.rmtree(dir, ignore_errors = True)
 
 def setup_at_install(desktop):
 	if 'common' in desktop:
@@ -66,9 +70,9 @@ def setup_at_remove(desktop):
 		shutil.copy('/usr/share/mamolinux/lsb-release.orig', '/etc/lsb-release')
 		shutil.copy('/usr/share/mamolinux/os-release.orig', '/usr/lib/os-release')
 		
-		shutil.rmtree('/etc/skel/.config/plank/dock1')
-		shutil.rmtree('/etc/skel/.config/synapse')
-		shutil.rmtree('/etc/skel/.config/theme-manager')
+		rmtree_dir('/etc/skel/.config/plank/dock1')
+		rmtree_dir('/etc/skel/.config/synapse')
+		rmtree_dir('/etc/skel/.config/theme-manager')
 		try:
 			os.rmdir('/usr/share/mamolinux')
 			os.rmdir('/etc/skel/.config/plank')
@@ -82,7 +86,7 @@ def setup_at_remove(desktop):
 			os.remove('/etc/apt/preferences.d/mamolinux.pref')
 	
 	if 'cinnamon' in desktop:
-		shutil.rmtree('/etc/skel/.cinnamon/configs/calendar@cinnamon.org')
+		rmtree_dir('/etc/skel/.cinnamon/configs/calendar@cinnamon.org')
 		try:
 			os.rmdir('/etc/skel/.cinnamon/configs')
 			os.rmdir('/etc/skel/.cinnamon')
