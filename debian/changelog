@@ -1,3 +1,16 @@
+mamolinux-settings (24.04.2.4) noble; urgency=medium
+
+  * Fix post install error for common package (#61)
+    - Fix mamolinux common settings post install
+      and remove error
+    - Do not do grub-install in postinst
+      and postrm
+  * Ignore errors when files are missing (#62)
+    - Fix filenotfound errors when deleteing
+      directories
+
+ -- Himadri Sekhar Basu <mamolinux@mamolinux.org>  Mon, 21 Apr 2025 21:08:11 +0530
+
 mamolinux-settings (24.04.2.3) noble; urgency=medium
 
   * Fix conflict between settings packages (#59)
