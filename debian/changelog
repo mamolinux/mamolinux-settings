@@ -1,3 +1,11 @@
+mamolinux-settings (24.10.1) oracular; urgency=medium
+
+  * Update mamolinux release to oracular (#63)
+    - Update mamolinux release version to oracular (24.10)
+    - Fix release upgrader icon
+
+ -- Himadri Sekhar Basu <mamolinux@mamolinux.org>  Thu, 22 May 2025 12:14:28 +0530
+
 mamolinux-settings (24.04.2.4) noble; urgency=medium
 
   * Fix post install error for common package (#61)
