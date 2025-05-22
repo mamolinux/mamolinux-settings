@@ -18,6 +18,11 @@ case "$1" in
       glib-compile-schemas /usr/share/glib-2.0/schemas
     fi
     
+    if which gtk-update-icon-cache >/dev/null 2>&1
+    then
+      gtk-update-icon-cache -q -t -f /usr/share/icons/hicolor
+    fi
+    
     if which update-grub2 >/dev/null 2>&1
     then
       update-grub2
