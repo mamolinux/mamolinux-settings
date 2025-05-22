@@ -2,6 +2,7 @@ etc
 usr/bin
 usr/lib
 usr/share/applications
+usr/share/icons
 usr/share/mamolinux/10_linux
 usr/share/mamolinux/grub
 usr/share/mamolinux/lsb-release
