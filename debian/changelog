@@ -1,3 +1,11 @@
+mamolinux-settings (25.04.1) plucky; urgency=medium
+
+  * Update mamolinux release to plucky (#64)
+    - Update mamolinux release version to plucky (25.04)
+    - Disable grub os probing by default
+
+ -- Himadri Sekhar Basu <mamolinux@mamolinux.org>  Thu, 29 May 2025 01:07:51 +0530
+
 mamolinux-settings (24.10.1) oracular; urgency=medium
 
   * Update mamolinux release to oracular (#63)
