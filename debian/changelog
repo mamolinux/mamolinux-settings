@@ -1,3 +1,11 @@
+mamolinux-settings (25.10.1) questing; urgency=medium
+
+  * Update mamolinux release to questing (#65)
+    - Update mamolinux release version to questing (25.10)
+  * Update workflow to sync stable branch (#66)
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Mon, 20 Oct 2025 13:21:51 +0530
+
 mamolinux-settings (25.04.1) plucky; urgency=medium
 
   * Update mamolinux release to plucky (#64)
