@@ -37,7 +37,7 @@ if [ "x${GRUB_DISTRIBUTOR}" = "x" ] ; then
   OS=GNU/Linux
 else
   case ${GRUB_DISTRIBUTOR} in
-    Ubuntu|Kubuntu|MamoLinux)
+    Ubuntu|*GNU/Linux|MamoLinux)
       OS="${GRUB_DISTRIBUTOR}"
       ;;
     *)
@@ -52,11 +52,6 @@ fi
 case ${GRUB_DEVICE} in
   /dev/loop/*|/dev/loop[0-9])
     GRUB_DEVICE=`losetup ${GRUB_DEVICE} | sed -e "s/^[^(]*(\([^)]\+\)).*/\1/"`
-    # We can't cope with devices loop-mounted from files here.
-    case ${GRUB_DEVICE} in
-      /dev/*) ;;
-      *) exit 0 ;;
-    esac
   ;;
 esac
 
@@ -139,7 +134,7 @@ case x"$GRUB_FS" in
 	if [ -e "`dirname $(readlink -f $0)`/10_linux_zfs" ]; then
 	  exit 0
 	fi
-	rpool=`${grub_probe} --device ${GRUB_DEVICE} --target=fs_label 2>/dev/null || true`
+	rpool=`${grub_probe} --device ${GRUB_DEVICE} --target=fs_label 2>/dev/null || zdb -l ${GRUB_DEVICE} | awk -F \' '/ name/ { print $2 }'`
 	bootfs="`make_system_path_relative_to_its_root / | sed -e "s,@$,,"`"
 	LINUX_ROOT_DEVICE="ZFS=${rpool}${bootfs%/}"
 	;;
