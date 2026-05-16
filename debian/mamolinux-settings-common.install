@@ -4,6 +4,7 @@ usr/lib
 usr/share/applications
 usr/share/icons
 usr/share/mamolinux/10_linux
+usr/share/mamolinux/10_linux_zfs
 usr/share/mamolinux/grub
 usr/share/mamolinux/lsb-release
 usr/share/mamolinux/mamolinux_settings_setup
