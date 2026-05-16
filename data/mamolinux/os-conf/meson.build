@@ -13,10 +13,12 @@ install_data('slick-greeter.conf',
 			  install_dir: greeterprefdir,
 			  install_mode: 'rw-r--r--')
 
-srcs = ['10_linux', 'grub', 'lsb-release', 'os-release']
+srcs = ['10_linux', '10_linux_zfs', 'grub', 'lsb-release', 'os-release']
 foreach i : range(srcs.length())
 	src = srcs[i]
 	if src == '10_linux'
+		mode = 'rwxr--r--'
+	elif src == '10_linux_zfs'
 		mode = 'rwxr--r--'
 	else
 		mode = 'rw-r--r--'
