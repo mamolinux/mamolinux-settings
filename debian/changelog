@@ -1,3 +1,19 @@
+mamolinux-settings (26.04.1) resolute; urgency=medium
+
+  * fix postrm script for gnome settings (#67)
+  * Update mamolinux release to resolute (#68)
+    - Update mamolinux release version to resolute
+      (26.04)
+  * Add and update scripts (#69)
+    - Add zfs grub settings (10_linux_zfs) from
+      ubuntu
+    - Add test script
+    - Add openfoam source
+  * Include zfs grub script via meson (#70)
+    - Fix debian packaging
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Sat, 16 May 2026 23:48:53 +0530
+
 mamolinux-settings (25.10.1) questing; urgency=medium
 
   * Update mamolinux release to questing (#65)
