@@ -1,0 +1,9 @@
+#!/bin/bash
+echo -e "#OpenFOAM\n\
+Types: deb\n\
+URIs: https://dl.openfoam.com/repos/deb\n\
+Suites: resolute\n\
+Components: main\n\
+Architectures: amd64\n\
+Signed-By: /etc/apt/trusted.gpg.d/openfoam.gpg\n\
+Enabled: yes" | tee /etc/apt/sources.list.d/openfoam.sources
