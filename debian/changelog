@@ -1,3 +1,16 @@
+mamolinux-settings (26.04.2) resolute; urgency=medium
+
+  * Fix debian install script for unavailable files (#71)
+    - Fix preinstall script to not fail if the files
+      it tries to remove are not present. This is
+      necessary because the files in question are
+      only present if the user has installed the
+      package before, and we want to allow for a
+      clean installation even if the user has never
+      installed the package before.
+
+ -- Himadri Sekhar Basu <hsb10@iitbbs.ac.in>  Mon, 18 May 2026 00:33:59 +0530
+
 mamolinux-settings (26.04.1) resolute; urgency=medium
 
   * fix postrm script for gnome settings (#67)
