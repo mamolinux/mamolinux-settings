@@ -7,8 +7,7 @@ import sys
 
 
 def sys_settings(src, dest):
-	if not os.path.isfile(src+'.orig'):
-		shutil.copy(dest, src+'.orig')
+	shutil.copy(dest, src+'.orig')
 	shutil.copy(src, dest)
 
 def sys_preinst(src, dest):
@@ -65,28 +64,21 @@ def setup_at_install(desktop):
 	if 'cinnamon' in desktop:
 		desktop_settings('/usr/share/mamolinux/cinnamon/calendar_config.json', '/etc/skel/.cinnamon/configs/calendar@cinnamon.org/13.json')
 
-def setup_at_remove(desktop):
-	if 'common' in desktop:
-		shutil.copy('/usr/share/mamolinux/10_linux.orig', '/etc/grub.d/10_linux')
-		shutil.copy('/usr/share/mamolinux/10_linux_zfs.orig', '/etc/grub.d/10_linux_zfs')
-		shutil.copy('/usr/share/mamolinux/grub.orig', '/etc/default/grub')
-		shutil.copy('/usr/share/mamolinux/lsb-release.orig', '/etc/lsb-release')
-		shutil.copy('/usr/share/mamolinux/os-release.orig', '/usr/lib/os-release')
-		
-		rmtree_dir('/etc/skel/.config/plank/dock1')
-		rmtree_dir('/etc/skel/.config/synapse')
-		rmtree_dir('/etc/skel/.config/theme-manager')
-		try:
-			os.rmdir('/usr/share/mamolinux')
-			os.rmdir('/etc/skel/.config/plank')
-			os.rmdir('/etc/skel/.config')
-		except Exception as e:
-			print(e)
-		
-		if os.path.exists('/etc/mamolinux'):
-			shutil.rmtree('/etc/mamolinux')
-		if os.path.exists('/etc/apt/preferences.d/mamolinux.pref'):
-			os.remove('/etc/apt/preferences.d/mamolinux.pref')
+def setup_at_preinst(desktop):
+	rmtree_dir('/etc/skel/.config/plank/dock1')
+	rmtree_dir('/etc/skel/.config/synapse')
+	rmtree_dir('/etc/skel/.config/theme-manager')
+	try:
+		os.rmdir('/usr/share/mamolinux')
+		os.rmdir('/etc/skel/.config/plank')
+		os.rmdir('/etc/skel/.config')
+	except Exception as e:
+		print(e)
+	
+	if os.path.exists('/etc/mamolinux'):
+		shutil.rmtree('/etc/mamolinux')
+	if os.path.exists('/etc/apt/preferences.d/mamolinux.pref'):
+		os.remove('/etc/apt/preferences.d/mamolinux.pref')
 	
 	if 'cinnamon' in desktop:
 		rmtree_dir('/etc/skel/.cinnamon/configs/calendar@cinnamon.org')
@@ -95,6 +87,13 @@ def setup_at_remove(desktop):
 			os.rmdir('/etc/skel/.cinnamon')
 		except Exception as e:
 			print(e)
+
+def setup_at_prerm():
+	sys_preinst('/usr/share/mamolinux/10_linux.orig', '/etc/grub.d/10_linux')
+	sys_preinst('/usr/share/mamolinux/10_linux_zfs.orig', '/etc/grub.d/10_linux_zfs')
+	sys_preinst('/usr/share/mamolinux/grub.orig', '/etc/default/grub')
+	sys_preinst('/usr/share/mamolinux/lsb-release.orig', '/etc/lsb-release')
+	sys_preinst('/usr/share/mamolinux/os-release.orig', '/usr/lib/os-release')
 
 
 if __name__ == '__main__':
@@ -107,7 +106,8 @@ if __name__ == '__main__':
 	if args.mode == 'install':
 		setup_at_install(args.desktop)
 	elif args.mode == 'remove':
-		setup_at_remove(args.desktop)
+		setup_at_preinst(args.desktop)
+		setup_at_prerm()
 	# except Exception as e:
 	# 	print(e)
 		# parser.print_help()
