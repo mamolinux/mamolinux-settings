@@ -1,7 +1,7 @@
-PRETTY_NAME="MamoLinux 26.04 LTS"
+PRETTY_NAME="MamoLinux 26.04.1 LTS"
 NAME="MamoLinux"
 VERSION_ID="26.04"
-VERSION="26.04 (Resolute Raccoon)"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
 VERSION_CODENAME=resolute
 ID=ubuntu
 ID_LIKE=debian
